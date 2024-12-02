@@ -8,6 +8,9 @@ import guru.springframework.spring6webapp.repositories.BookRepository;
 import guru.springframework.spring6webapp.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 
 @Component
@@ -61,8 +64,15 @@ public class BootstrapData implements CommandLineRunner {
         Publisher publisher = new Publisher();
         publisher.setPublisherName("My Publisher");
         publisher.setAddress("123 Main");
-        publisherRepository.save(publisher);
+        Publisher publisherSaved = publisherRepository.save(publisher);
 
+        dddSaved.setPublisher(publisherSaved);
+        noEJBSaved.setPublisher(publisherSaved);
+        
+        bookRepository.save(dddSaved);
+        bookRepository.save(noEJBSaved);
+                
         System.out.println("Publisher Count: " + publisherRepository.count());
+
     }
 }
