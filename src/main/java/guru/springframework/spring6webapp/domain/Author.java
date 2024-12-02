@@ -4,9 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Set;
 
-/**
- * Created by jt, Spring Framework Guru.
- */
+
 @Entity
 public class Author {
 
