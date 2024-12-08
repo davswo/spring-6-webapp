@@ -1,16 +1,13 @@
-package guru.springframework.spring6webapp.bootstrap;
+package dsw.springframework.spring6webapp.bootstrap;
 
-import guru.springframework.spring6webapp.domain.Author;
-import guru.springframework.spring6webapp.domain.Book;
-import guru.springframework.spring6webapp.domain.Publisher;
-import guru.springframework.spring6webapp.repositories.AuthorRepository;
-import guru.springframework.spring6webapp.repositories.BookRepository;
-import guru.springframework.spring6webapp.repositories.PublisherRepository;
+import dsw.springframework.spring6webapp.domain.Author;
+import dsw.springframework.spring6webapp.domain.Book;
+import dsw.springframework.spring6webapp.domain.Publisher;
+import dsw.springframework.spring6webapp.repositories.AuthorRepository;
+import dsw.springframework.spring6webapp.repositories.BookRepository;
+import dsw.springframework.spring6webapp.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.springframework.transaction.annotation.Transactional;
-
-import java.util.List;
 
 
 @Component
